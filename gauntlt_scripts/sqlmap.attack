@@ -6,7 +6,7 @@ Feature: Run sqlmap against a target
   Scenario: Identify SQL injection vulnerabilities
   	Given "sqlmap" is installed
   	And the following profile:
-    	| target_url  | http://localhost:300/|
+    	| target_url  | http://localhost:3000 |
   	When I launch a "sqlmap" attack with:
     	"""
     	/usr/bin/python <sqlmap_path> -u <target_url> --dbms sqlite
