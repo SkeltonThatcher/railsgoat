@@ -3,13 +3,14 @@ Feature: Run sqlmap against a target
   # See:
   #   https://github.com/sqlmapproject/sqlmap/wiki/Usage
 
+  Background:
+        Given The default aruba timeout is 60 seconds
+
   Scenario: Identify SQL injection vulnerabilities
   	Given "sqlmap" is installed
-  	And the following profile:
-    	| target_url  | http://localhost:3000 |
   	When I launch a "sqlmap" attack with:
     	"""
-    	/usr/bin/python <sqlmap_path> -u <target_url> --dbms sqlite
+    	python <sqlmap_path> -u http://localhost:3000/users/1/account_settings --dbms sqlite --batch -v 0 --tables
     	"""
   	Then the output should contain:
     	"""
