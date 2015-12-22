@@ -10,7 +10,7 @@ Feature: Run sqlmap against a target
   	Given "sqlmap" is installed
   	When I launch a "sqlmap" attack with:
     	"""
-    	python <sqlmap_path> -u http://localhost:3000/users/password/new --technique ES --os linux --batch --forms --dbms sqlite
+    	python <sqlmap_path> -u http://localhost:3000/users/1/account_settings --technique ES --os linux --batch --forms --dbms sqlite
     	"""
   	Then the output should not contain:
     	"""
