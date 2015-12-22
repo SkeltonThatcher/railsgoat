@@ -10,9 +10,13 @@ Feature: Run sqlmap against a target
   	Given "sqlmap" is installed
   	When I launch a "sqlmap" attack with:
     	"""
-    	python <sqlmap_path> -u http://localhost:3000/users/1/account_settings --dbms sqlite --batch -v 0 --tables
+    	python <sqlmap_path> -u http://localhost:3000/users/password/new --technique ES --os linux --batch --forms --dbms sqlite
     	"""
-  	Then the output should contain:
+  	Then the output should not contain:
     	"""
     	sqlmap identified the following injection points
     	"""
+        And the output should contain:
+        """
+        all tested parameters appear to be not injectable
+        """
