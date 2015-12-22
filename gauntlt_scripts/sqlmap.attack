@@ -4,7 +4,7 @@ Feature: Run sqlmap against a target
   #   https://github.com/sqlmapproject/sqlmap/wiki/Usage
 
   Background:
-        Given The default aruba timeout is 60 seconds
+        Given the default aruba timeout is 60 seconds
 
   Scenario: Identify SQL injection vulnerabilities
   	Given "sqlmap" is installed
