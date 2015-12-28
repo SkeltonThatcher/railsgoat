@@ -30,9 +30,7 @@ group :development, :mysql do
   gem 'binding_of_caller'
 end
 
-group :security_tests do
-  gem 'gauntlt'
-end
+#gem 'gauntlt'
 
 gem 'simplecov', :require => false, :group => :test
 
