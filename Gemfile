@@ -31,7 +31,7 @@ group :development, :mysql do
 end
 
 group :security_tests do
-  gem 'gauntlt', '>= 1.0.5' # supports reporting as html
+  gem 'gauntlt'
 end
 
 gem 'simplecov', :require => false, :group => :test
