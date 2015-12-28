@@ -30,7 +30,7 @@ group :development, :mysql do
   gem 'binding_of_caller'
 end
 
-gem 'gauntlt', '>= 1.0.5'
+gem 'gauntlt', '>= 1.0.5' # supports reporting as html
 
 gem 'simplecov', :require => false, :group => :test
 
@@ -72,7 +72,7 @@ gem 'jquery-rails'
 # Pow related gem
 gem 'powder'
 
-gem 'aruba'
+#gem 'aruba'
 #gem 'minitest', '~> 4.0', :require=> "minitest/autorun"
 
 #gem 'minitest'
