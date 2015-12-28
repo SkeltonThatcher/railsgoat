@@ -30,7 +30,7 @@ group :development, :mysql do
   gem 'binding_of_caller'
 end
 
-gem 'gauntlt', '1.0.5' # supports reporting as html
+gem 'gauntlt', '1.0.6' # supports reporting as html
 
 gem 'simplecov', :require => false, :group => :test
 
